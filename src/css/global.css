@@ -1,3 +1,55 @@
+@font-face {
+    font-family: karu;
+    src: url(/public/fonts/karu-bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(/public/fonts/Montserrat-Regular.ttf);
+}
+
 body {
+    background-color: #F0EADE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: karu;
+}
+
+p {
+    font-family: montserrat;
+}
+
+/* Font-farver */
+.green {
+    color: #4C513A;
+}
+
+.pink {
+    color: #D8A8A0;
+}
+
+.brown {
+    color: #2F2521;
+}
+
+.sand {
+    color: #F0EADE;
+}
+
+/* Baggrundsfarver */
+.green-bg {
+    background-color: #4C513A;
+}
+
+.pink-bg {
+    background-color: #D8A8A0;
+}
+
+.brown-bg {
+    background-color: #2F2521;
+}
+
+.sand-bg {
     background-color: #F0EADE;
 }

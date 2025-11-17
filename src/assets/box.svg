@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <g id="Layer_2" data-name="Layer 2">
+    <polygon points="236.94 482.56 406.01 561.94 411.46 377.73 236.94 320.16 236.94 482.56" style="fill: #dad0be; opacity: .99; stroke: #2f2521; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4px;"/>
+    <polygon points="562.96 335.91 557.5 501.95 406.01 561.94 411.46 377.73 562.96 335.91" style="fill: #dad0be; opacity: .99; stroke: #2f2521; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4px;"/>
+    <polygon points="386.01 281.37 562.96 335.91 411.46 377.73 236.94 320.16 386.01 281.37" style="fill: #dad0be; opacity: .99; stroke: #2f2521; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4px;"/>
+  </g>
+  <g id="Layer_3" data-name="Layer 3">
+    <polygon points="466.3 362.59 466.3 385.73 510.97 374.16 510.97 350.26 466.3 362.59" style="fill: #d8a8a0; opacity: .99; stroke: #2f2521; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"/>
+    <polygon points="304.29 302.64 466.3 362.59 510.97 350.26 348.83 291.05 304.29 302.64" style="fill: #d8a8a0; opacity: .99; stroke: #2f2521; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"/>
+  </g>
+</svg>
