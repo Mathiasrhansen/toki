@@ -7,6 +7,10 @@
     font-family: montserrat;
     src: url(/public/fonts/Montserrat-Regular.ttf);
 }
+@font-face {
+    font-family: didot-italic;
+    src: url(/public/fonts/gfs-didot-italic.ttf);
+}
 
 body {
     background-color: #F0EADE;
@@ -16,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: karu;
 }
 
-p {
+p, a {
     font-family: montserrat;
 }
 
