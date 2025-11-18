@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="contact-section">
+    <div class="contact-wrapper">
+      <form class="contact-form">
+        <h1>Get in touch</h1>
+        <label for="name">Company name:</label>
+        <input id="name" type="text" name="name" />
+
+        <label for="email">E-mail:</label>
+        <input id="email" type="email" name="email" />
+
+        <label for="message">Inquiry:</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+
+        <button type="submit">LET'S CONNECT!</button>
+      </form>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .contact-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 3rem 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #808368;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #d8a8a0;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9rem;
+    max-width: 800px;
+    width: 100%;
+    background-color: #f0eade;
+    color: #d8a8a0;
+    border-radius: 24px;
+    padding: 2rem 1rem;
+  }
+
+  .contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 350px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: #fff7e7;
+    border: none;
+    padding: 1rem 0;
+    font-size: 14px;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .contact-form textarea {
+    resize: none;
+  }
+
+  .contact-form button {
+    margin-top: 1rem;
+    background-color: #d8a8a0;
+    color: #f0eade;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #efcac3;
+    color: #2f2521;
+  }
+
+  button {
+    font-family: karu;
+    font-size: 18px;
+  }
+
+  label {
+    font-family: montserrat;
+  }
+
+  @media (min-width: 800px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    button {
+      font-size: 22px;
+    }
+
+    .contact-form label {
+      font-size: 14px;
+    }
+  }
+</style>
