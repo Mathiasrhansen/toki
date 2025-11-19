@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
@@ -9,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
     <meta charset="utf-8" />
   </head>
   <body>
+    <Layout />
     <div class="banner">
       <h1>ABOUT US</h1>
     </div>
@@ -447,18 +449,67 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
   </body>
+</html>
 
-  <style>
-    body {
-      margin: 0;
-    }
+<style>
+  body {
+    margin: 0;
+  }
+  .banner {
+    background-image: url("../assets/about-us.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+    padding: 0 40px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 2;
+    padding: 0 40px;
+  }
+
+  .grid-2-1 {
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .grid-2-1 h2,
+  .grid-2-1 p {
+    text-align: left;
+  }
+
+  .images {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .grid-1-2 {
+    background-image: url("../assets/grid-1-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  /* COMPUTER */
+
+  @media (min-width: 1024px) {
     .banner {
       background-image: url("../assets/about-us.png");
-      width: 100%;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     h1 {
@@ -466,7 +517,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     h2 {
-      font-size: 80px;
+      font-size: 40px;
       padding: 0 80px;
     }
 
@@ -478,11 +529,10 @@ import Layout from "../layouts/Layout.astro";
 
     .grid-2-1 {
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
+      grid-template-columns: 2fr 1fr;
       align-items: center;
-      min-height: 100vh;
-      padding: 40px;
+      min-height: 20vh;
+      padding: 10px 20px;
       gap: 30px;
     }
 
@@ -491,70 +541,19 @@ import Layout from "../layouts/Layout.astro";
       text-align: left;
     }
 
-    .images {
-      width: 100%;
-      justify-self: center;
-    }
-
     .grid-1-2 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
       background-image: url("../assets/grid-1-2.png");
-      background-size: cover;
+      background-size: 1500px;
       background-repeat: no-repeat;
       background-position: left;
-      padding-top: 200px;
+      padding-top: 400px;
+    }
+
+    .images {
+      margin-top: -100px;
       padding-bottom: 200px;
     }
-
-    /* COMPUTER */
-
-    @media (min-width: 1024px) {
-      .banner {
-        background-image: url("../assets/about-us.png");
-      }
-
-      h1 {
-        font-size: 120px;
-      }
-
-      h2 {
-        font-size: 40px;
-        padding: 0 80px;
-      }
-
-      p {
-        font-size: 20px;
-        line-height: 2;
-        padding: 0 80px;
-      }
-
-      .grid-2-1 {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        min-height: 20vh;
-        padding: 10px 20px;
-        gap: 30px;
-      }
-
-      .grid-2-1 h2,
-      .grid-2-1 p {
-        text-align: left;
-      }
-
-      .grid-1-2 {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        background-image: url("../assets/grid-1-2.png");
-        background-size: 1500px;
-        background-repeat: no-repeat;
-        background-position: left;
-        padding-top: 400px;
-      }
-
-      .images {
-        margin-top: -100px;
-        padding-bottom: 200px;
-      }
-    }
-  </style>
-</html>
+  }
+</style>
