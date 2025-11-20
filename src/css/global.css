@@ -7,6 +7,10 @@
     font-family: montserrat;
     src: url(/public/fonts/Montserrat-Regular.ttf);
 }
+@font-face {
+    font-family: didot-italic;
+    src: url(/public/fonts/gfs-didot-italic.ttf);
+}
 
 body {
     background-color: #F0EADE;
