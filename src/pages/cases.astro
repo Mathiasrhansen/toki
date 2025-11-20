@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import picture from "../assets/toki_case.webp";
+
+const endpoint = "https://zcgtjcnmolzzvnomsiam.supabase.co/rest/v1/cases";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjZ3RqY25tb2x6enZub21zaWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwODEzMDQsImV4cCI6MjA3ODY1NzMwNH0.hZsUS2CrB_CAxRnjXpPvgGbnF64MJx4_G0YzfEIWY7Q";
+
+const options = {
+  method: "GET",
+  headers: {
+    apikey: key,
+  },
+};
+
+const data = await fetch(endpoint, options).then((res) => res.json());
+console.log(data);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cases</title>
+  </head>
+  <Layout>
+    <body>
+      <div class="headerBanner">
+        <h1 class="sand">CASES</h1>
+      </div>
+      <div class="textContainer">
+        <h2 class="green">
+          Great packaging doesn't happen by accident. It happens by design - and
+          by flow
+        </h2>
+      </div>
+      <div class="caseContainer">
+        {data.map((product) => <Card data={product} />)}
+      </div>
+      <section class="endSection">
+        <img class="tape" src={picture.src} alt="" />
+        <div class="textContainerEnd">
+          <h2 class="text sand">
+            We create solutions that carry;<br />Your <span>product,</span> your
+            <span>story,</span> your <span>identity.</span><br />
+            <span class="mont"
+              >Born in the Nordics.Made for brands that seek to make a positive
+              mark on the world.</span
+            >
+          </h2>
+        </div>
+      </section>
+    </body>
+  </Layout>
+</html>
+
+<style>
+  @font-face {
+    font-family: didot;
+    src: url(/fonts/gfs-didot-italic.ttf);
+  }
+
+  /* @media (max-width: 400px) {
+    h1 {
+      font-size: 10px;
+    }
+
+    .caseContainer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .endSection {
+      display: flex;
+      flex-direction: column;
+    }
+  } */
+
+  span {
+    font-family: didot;
+  }
+  body {
+    margin: 0 0;
+  }
+
+  .headerBanner {
+    background-image: url("../assets/banner.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 128px;
+  }
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caseContainer {
+    background-image: url("../assets/cases_wave.png");
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-bottom: 50px;
+  }
+
+  .text {
+    font-size: 43px;
+  }
+
+  .endSection {
+    background-image: url("../assets/case-bottom.png");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 200px 0;
+  }
+
+  .textContainerEnd {
+    width: 40vw;
+  }
+
+  .mont {
+    font-family: montserrat;
+    font-size: 32px;
+  }
+
+  .tape {
+    height: 500px;
+    width: auto;
+    border-radius: 20px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    h1 {
+      padding-top: 15px;
+      margin-bottom: 30px;
+      font-size: 48px;
+    }
+
+    .headerBanner {
+      background-image: url("../assets/banner.png");
+      margin-bottom: 50px;
+    }
+
+    .textContainer {
+      text-align: center;
+    }
+
+    .caseContainer {
+      grid-template-columns: 1fr;
+      background-repeat: repeat-y;
+    }
+
+    .endSection {
+      flex-direction: column;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .textContainerEnd {
+      margin-top: 40px;
+      width: 90vw;
+      order: 1;
+    }
+
+    .tape {
+      order: 2;
+      width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+</style>
