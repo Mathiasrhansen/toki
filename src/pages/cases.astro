@@ -32,10 +32,10 @@ console.log(data);
         <h1 class="sand">CASES</h1>
       </div>
       <div class="textContainer">
-        <h2 class="green">
-          Great packaging doesn't happen by accident. It happens by design - and
-          by flow
+        <h2 class="green subheader">
+          Great packaging doesn't happen by accident. It happens by design
         </h2>
+        <h2 class="green sub">- and by flow</h2>
       </div>
       <div class="caseContainer">
         {data.map((product) => <Card data={product} />)}
@@ -63,21 +63,6 @@ console.log(data);
     src: url(/fonts/gfs-didot-italic.ttf);
   }
 
-  /* @media (max-width: 400px) {
-    h1 {
-      font-size: 10px;
-    }
-
-    .caseContainer {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .endSection {
-      display: flex;
-      flex-direction: column;
-    }
-  } */
-
   span {
     font-family: didot;
   }
@@ -99,8 +84,21 @@ console.log(data);
 
   .textContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+  }
+
+  .subheader {
+    font-size: 40px;
+    margin: 0 30vw;
+  }
+
+  .sub {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
   }
 
   .caseContainer {
