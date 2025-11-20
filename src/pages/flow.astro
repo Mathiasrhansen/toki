@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tóki Flow</title>
+  </head>
+  <Layout>
+    <body>
+      <section class="banner">
+        <h1 class="sand">TÓKI FLOW</h1>
+        <h2 class="sand">
+          Through <span>five</span> steps of the TÓKI Flow, insight becomes <span
+            >ideas</span
+          > - and ideas become <span>impact.</span>
+        </h2>
+      </section>
+    </body>
+  </Layout>
+</html>
+
+<style>
+  @font-face {
+    font-family: didot;
+    src: url(/fonts/gfs-didot-italic.ttf);
+  }
+
+  .banner {
+    background-image: url("../assets/flow-banner.png");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+  }
+
+  span {
+    font-family: didot;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+</style>

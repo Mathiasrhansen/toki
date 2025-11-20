@@ -1,0 +1,91 @@
+---
+const { data } = Astro.props;
+
+const test = `https://zcgtjcnmolzzvnomsiam.supabase.co/storage/v1/object/public/case_images/${data.hover}`;
+const og = `https://zcgtjcnmolzzvnomsiam.supabase.co/storage/v1/object/public/case_images/${data.image}`;
+---
+
+<article>
+  <img
+    src=`https://zcgtjcnmolzzvnomsiam.supabase.co/storage/v1/object/public/case_images/${data.image}`
+    alt="casepicture"
+    class="card-image"
+    data-original={og}
+    data-hover={test}
+  />
+  <div>
+    <h2>{data.name}</h2>
+    <a href="/vera">Learn more</a>
+  </div>
+</article>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll("article");
+
+    cards.forEach((card) => {
+      const img = card.querySelector(".card-image");
+      const originalSrc = img.getAttribute("data-original");
+      const hoverSrc = img.getAttribute("data-hover");
+
+      card.addEventListener("mouseenter", () => {
+        img.src = hoverSrc;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        img.src = originalSrc;
+      });
+    });
+  });
+</script>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #4c513a;
+    background-color: #f5ede4;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 80px;
+  }
+
+  article:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  div {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f5ede4;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #4c513a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    color: #4c513a;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+  }
+
+  a:hover {
+    color: #d8a8a0;
+  }
+</style>
