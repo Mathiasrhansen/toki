@@ -15,10 +15,20 @@ import Layout from "../layouts/Layout.astro";
       <section class="banner">
         <h1 class="sand">TÓKI FLOW</h1>
         <h2 class="sand">
-          Through <span>five</span> steps of the TÓKI Flow, insight becomes <span
-            >ideas</span
-          > - and ideas become <span>impact.</span>
+          Through <span>five</span> steps of the TÓKI Flow, insight becomes <span>ideas</span> - and ideas become <span>impact.</span>
         </h2>
+      </section>
+      <section class="flow-at-a-glance">
+        <div class="inner">
+          <h2>TÓKI FLOW AT A GLANCE</h2>
+          <div class="divider"></div>
+
+          <p>With TÓKI Flow, we create more than packaging — we create systems that work. Solutions that strengthen brands, optimize value chains, and reduce impact.</p>
+
+          <p>By thinking holistically from the start, packaging becomes a strategic tool — not a cost, but an opportunity.</p>
+
+          <p>Together, partnership becomes progress — from idea to impact.</p>
+        </div>
       </section>
     </body>
   </Layout>
@@ -48,5 +58,39 @@ import Layout from "../layouts/Layout.astro";
     font-size: 64px;
     margin-bottom: 0;
     margin-top: 2rem;
+  }
+
+  .flow-at-a-glance {
+    background-image: url(../assets/flow-at-a-glance.png);
+    color: #eae7df;
+    text-align: center;
+    padding: 6rem 1.5rem 8rem;
+    position: relative;
+  }
+
+  .flow-at-a-glance:hover {
+    background-image: url(../assets/flow-hover.png);
+  }
+
+  .flow-at-a-glance h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .divider {
+    width: 80px;
+    height: 3px;
+    background: #efebe2;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+    opacity: 0.9;
+  }
+
+  .flow-at-a-glance p {
+    max-width: 44ch;
+    margin: 0 auto 1.4rem;
+    line-height: 1.7rem;
+    font-size: 1rem;
   }
 </style>
