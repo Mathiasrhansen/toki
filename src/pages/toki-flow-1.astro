@@ -1,0 +1,171 @@
+---
+import Layout from "../layouts/Layout.astro";
+import tokiflow from "../assets/toki-flow.png";
+---
+
+<Layout>
+  <section class="toki-flow-2">
+    <div class="text-container">
+      <h2>At TÓKI, we work in <em class="flow">flow.</em></h2>
+      <p>
+        A flow where insights become ideas — and ideas turn into solutions that create real value for brand, customer,
+        and planet. <br /> The TÓKI Flow is more than a process — it's a journey from understanding to transformation. Each
+        path can stand alone or form one unified partnership.<br />We don't just deliver - we create movement, clarity,
+        and impact.
+      </p>
+    </div>
+    <img src={tokiflow.src} />
+  </section>
+  <section class="toki-steps">
+    <div class="step-1-2">
+      <div>
+        <h3>The T</h3>
+        <p>Marks the beginning - we listen openly and sharpen the focus.</p>
+      </div>
+      <div>
+        <h3>The Steps</h3>
+        <p>Show our process - built step by step with curiosity and structure.</p>
+      </div>
+    </div>
+    <div class="step-2-3">
+      <div>
+        <h3>The Colors</h3>
+        <p>Represent choice and refinement - where ideas are tested and perfected.</p>
+      </div>
+      <div>
+        <h3>The Circle</h3>
+        <p>Unites it all - a living system with direction and balance.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .toki-flow-2 {
+    color: #2f2521;
+  }
+
+  .toki-flow-2 {
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .toki-flow-2 .text-container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .toki-flow-2 .text-container .flow {
+    font-family: didot-italic;
+    font-weight: 600;
+  }
+
+  .toki-flow-2 .text-container p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+  }
+
+  .text-container {
+    border-bottom: 2px solid #2f2521;
+    margin: 1rem;
+  }
+
+  .toki-flow-2 img {
+    display: block;
+    width: 65%;
+    margin: 2rem auto 0;
+    max-width: 280px;
+  }
+
+  .toki-steps {
+    padding: 3rem 2rem 5rem;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .toki-steps h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #2f2521;
+  }
+
+  .toki-steps p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2f2521;
+    margin-bottom: 1.8rem;
+  }
+
+  .step-1-2,
+  .step-2-3 {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 800px) {
+    .toki-flow-2 {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      padding: 6rem 8rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .toki-flow-2 .text-container {
+      flex: 1.2;
+      max-width: 520px;
+    }
+
+    .toki-flow-2 img {
+      flex: 1;
+      max-width: 550px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .toki-flow-2 .text-container h2 {
+      font-size: 30px;
+    }
+
+    .toki-flow-2 .text-container p {
+      font-size: 18px;
+    }
+
+    .toki-flow-2 .text-container::after {
+      margin: 3rem 0 0;
+    }
+
+    .toki-steps {
+      max-width: 1200px;
+      margin: 4rem auto 6rem;
+      padding: 0 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
+      row-gap: 2.5rem;
+      margin-top: -2rem;
+    }
+
+    .step-1-2,
+    .step-2-3 {
+      margin: 0;
+    }
+
+    .toki-steps h3 {
+      font-size: 24px;
+    }
+
+    .toki-steps p {
+      font-size: 18px;
+    }
+  }
+</style>
