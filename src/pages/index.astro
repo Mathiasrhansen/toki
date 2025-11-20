@@ -110,6 +110,11 @@ import tokihero from "../assets/toki-hero.png";
       z-index: 1;
     }
 
+    .wave path {
+      transition: fill 0.25s ease;
+      pointer-events: auto;
+    }
+
     .wave path:hover {
       fill: #4c513a;
     }
@@ -228,11 +233,9 @@ import tokihero from "../assets/toki-hero.png";
       .wave {
         position: absolute;
         left: 0;
+        bottom: 0;
         width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        bottom: -1px;
-        height: auto;
+        height: 120px;
       }
 
       .toki-flow__title {
